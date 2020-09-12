@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="362.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.kitchen.ShiftTable">
+   <top>
+      <Label alignment="CENTER" prefHeight="31.0" prefWidth="575.0" text="Tabellone dei turni" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <FlowPane alignment="CENTER" hgap="10.0" prefHeight="53.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#saturoButtonPressed" text="Turno saturo" />
+         </children>
+      </FlowPane>
+   </bottom>
+   <center>
+      <ListView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </ListView>
+   </center>
+</BorderPane>

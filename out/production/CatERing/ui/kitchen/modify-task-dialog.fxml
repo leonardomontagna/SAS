@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="141.0" prefWidth="367.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.kitchen.ModifyTaskDialog">
+   <bottom>
+      <FlowPane alignment="CENTER" hgap="5.0" prefHeight="0.0" prefWidth="409.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#modificaButtonPressed" text="Aggiungi" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </FlowPane>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <children>
+            <ComboBox fx:id="cuoco" prefHeight="27.0" prefWidth="469.0" />
+            <ComboBox fx:id="turno" prefHeight="26.0" prefWidth="358.0" />
+            <TextField fx:id="tempo" prefHeight="26.0" prefWidth="33.0" promptText="Inserisci durata" />
+            <TextField fx:id="porzioni" promptText="Inserisci porzioni" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

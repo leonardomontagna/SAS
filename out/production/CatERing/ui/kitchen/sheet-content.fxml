@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.kitchen.SheetContent">
+   <top>
+      <BorderPane nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <center>
+            <Label alignment="TOP_LEFT" prefHeight="31.0" prefWidth="592.0" text="Lista compiti" BorderPane.alignment="CENTER_LEFT">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+   </top>
+   <bottom>
+      <FlowPane alignment="CENTER" hgap="5.0" prefHeight="39.0" prefWidth="517.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#fineButtonPressed" text="Esci">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" text="Tab. turni" onAction="#tabturniButtonPressed" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </FlowPane>
+   </bottom>
+   <center>
+      <GridPane fx:id="centralPane" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #aaaaaa; -fx-border-width: 1;">
+               <top>
+                  <Label prefHeight="17.0" prefWidth="272.0" text="Compiti:" BorderPane.alignment="CENTER_LEFT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </top>
+               <center>
+                  <BorderPane BorderPane.alignment="CENTER">
+                     <center>
+                        <ListView fx:id="taskList" onMousePressed="#showAssignment" prefHeight="200.0" prefWidth="200.0" />
+                     </center>
+                  </BorderPane>
+               </center>
+               <bottom>
+                  <FlowPane alignment="CENTER" hgap="5.0" prefHeight="38.0" prefWidth="264.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#aggiungiButtonPressed" text="+" />
+                        <Button mnemonicParsing="false" onAction="#deleteTaskButtonPressed" text="–" />
+                        <Button mnemonicParsing="false" onAction="#modificaButtonPressed" text="Modifica" />
+                        <Button mnemonicParsing="false" onAction="#upItemPressed" text="Up" />
+                        <Button mnemonicParsing="false" onAction="#downItemPressed" text="Down" />
+                        <ToggleButton fx:id="prontoButton" mnemonicParsing="false" onAction="#prontoButtonPressed" text="Pronto" />
+                     </children>
+                  </FlowPane>
+               </bottom>
+               <GridPane.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </BorderPane>
+            <BorderPane fx:id="assignmentsPane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #aaaaaa; -fx-border-width: 1;" GridPane.columnIndex="1">
+               <bottom>
+                  <FlowPane alignment="CENTER" hgap="5.0" prefHeight="38.0" prefWidth="264.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#resetButtonPressed" text="Elimina assegnamento" />
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </FlowPane>
+               </bottom>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </GridPane.margin>
+               <left>
+                  <Pane prefHeight="254.0" prefWidth="281.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="cuoco" />
+                        <Label fx:id="turno" layoutY="91.0" />
+                        <Label fx:id="ricetta" layoutY="23.0" />
+                        <Label fx:id="porzioni" layoutY="40.0" />
+                        <Label fx:id="tempoStimato" layoutY="57.0" />
+                        <Label fx:id="pronto" layoutY="74.0" />
+                     </children>
+                  </Pane>
+               </left>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
